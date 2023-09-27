@@ -16,22 +16,25 @@ public class mostAppearance {
             if (!list.containsKey(String.valueOf(val))) {
 
                 list.put(String.valueOf(val), 1);
-            }
-             else {
+            } else {
 
-               // System.out.println(list.get(String.valueOf(val)));
-                list.put(String.valueOf(val), list.get(String.valueOf(val))+1);
+                // System.out.println(list.get(String.valueOf(val)));
+                list.put(String.valueOf(val), list.get(String.valueOf(val)) + 1);
             }
-        
+
         }
-
+     
+        int max = 0;
         for (Entry<String, Integer> keys : list.entrySet()) {
             
-            System.out.println(keys);
+            if (keys.getValue() > max) {
+                max = keys.getValue();
+            }
+           
         }
           
 
-        return 0;
+        return max;
     }
    
     

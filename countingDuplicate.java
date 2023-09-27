@@ -1,31 +1,27 @@
-import java.util.HashSet;
-import java.util.Set;
 
+import java.util.*;
 public class countingDuplicate {
-    
 
-    public static int duplicateCount(String x) {
-        
-        Set<Character> list = new HashSet<>();
-        int count = 0;
-        for (int i = 0; i < x.length(); i++) {
-             
-            if (!list.add(x.charAt(i))) {
-                count = count + 1;
-            }
+    // Counting duplicate characters: Write a program that counts duplicate
+    // characters from a given string.
 
-        }
-        return count;
+   public static int countDuplicateVal(String givenString) {
+      int count = 0;
 
-    }
+      Set<Character> list = new HashSet<>();
+      for (int i = 0; i < givenString.length(); i++) {
 
+          if (!list.add(givenString.charAt(i))) {
+              count++;
 
-    public static void main(String[] args) {
-        
+     }
+     }
+     return count;
+   }
 
-        String x = "abcdebbff";
-          System.out.println(duplicateCount(x));
-    } 
+  public static void main(String[] args) {
 
-    
+      System.out.println(countDuplicateVal("abcaabbb"));
+
+}
 }
