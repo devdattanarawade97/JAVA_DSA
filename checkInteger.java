@@ -12,6 +12,7 @@ public class checkInteger {
             
             try {
                 int val = Integer.parseInt(String.valueOf(x.charAt(i)));
+                
                 status = true;
             } catch (Exception e) {
                 // TODO: handle exception
