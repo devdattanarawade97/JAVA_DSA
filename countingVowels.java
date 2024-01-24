@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -37,7 +38,32 @@ public class countingVowels {
         return vowelCount;
     }
 
+    
+    public static int countingVowels2(String x) {
+        
+        int number=0;
+        try {
+            
+            String[] charList = x.split("");
+            String[] vowelsList = new String[] { "a", "e", "i", "o", "u" };
+            List<String> vowelArrayList = Arrays.asList(vowelsList);
+            for (String eachChar : charList) {
 
+                if (vowelArrayList.contains(eachChar)) {
+                    number++;
+                }
+               
+            }
+            
+            // number=charList.length;
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e.getMessage());
+        }
+        
+        return number;
+        
+    }
 
     public static void main(String[] args) {
         
@@ -45,8 +71,8 @@ public class countingVowels {
 
         String x = "abcdefghi";
         
-        System.out.println(countVowel(x));
-
+       // System.out.println(countVowel(x));
+        System.out.println(countingVowels2(x));
 
     }
 

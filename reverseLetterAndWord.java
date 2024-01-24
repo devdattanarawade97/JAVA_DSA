@@ -31,9 +31,18 @@ public class reverseLetterAndWord {
 
   }
 
+  //reverse method :
+  public static String reverse1(String givenString) {
+
+      
+    StringBuilder builder= new StringBuilder(givenString).reverse();
+    return builder.toString();
+
+  }
+
   public static void main(String[] args) {
 
     System.out.println(reverse("hello world"));
-
+    System.out.println(reverse1("hello world"));
   }
 }
